@@ -1,0 +1,358 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+:root {
+    --fontFamily: 'Noto Sans', sans-serif;
+    --fontSize: 16px;
+    --headerColorFont: #252526;
+    --colorFont: #595959;
+    --colorWhite: #fff;
+    --colorBck: #e1e1e9;
+    --colorLightGray: #f7f7f7;
+    --colorBlack: #000;
+    --padding: 100px 0;
+    --transition: 0.5s ease;
+}
+
+
+/***************
+basic styles
+****************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    line-height: 1.5;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    color: var(--headerColorFont);
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+button {
+    background: transparent;
+    color: var(--colorBlack);
+    border: 1px solid var(--colorBlack);
+    padding: 10px 25px;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+button:hover {
+    background: var(--colorBlack);
+    color: var(--colorWhite);
+    cursor: pointer;
+}
+.container {
+    width: 65%;
+    margin: auto;
+}
+/***************
+header
+****************/
+header {
+    background-image: linear-gradient(
+        rgba(255,255,255,.1),
+        rgba(255,255,255,.99)),url(img/bckHeader.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    color: var(--colorWhite);
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.logo {
+    color: var(--colorLightGray);
+    text-shadow: 0 0 3px #fdac53;
+    font-weight: 700;
+    font-size: 3.2rem;
+    transition: var(--transition);
+}
+.logo:hover {
+    color: #fdac53;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+header nav ul li a {
+    color: var(--colorWhite);
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+header .active {
+    color: #fdac53;	
+     
+}
+header nav ul li a:hover {
+    color: #fdac53;
+    transition: var(--transition);
+    cursor: pointer;
+}
+header hgroup {
+    position: absolute;
+    top: 65%;
+    right: 50%;
+    transform: translateY(-50%);
+}
+header hgroup h1 {
+    color: var(--colorBlack);
+    font-size: 5rem;
+    padding: 10px 0 20px 0;
+}
+header hgroup h3 {
+    color: var(--colorBlack);
+    font-size: 2rem;
+    font-weight: 400;
+}
+header span {
+    font-style: italic;
+    padding: 0 15px;
+    color: var(--colorBlack);
+}
+
+/***************
+portfolio
+****************/
+
+.portfolio {
+    background-color: var(--colorWhite);
+    padding: var(--padding);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio article {
+    flex: 0 0 32%;
+}
+.portfolio i {
+    font-size: 1.6rem;
+}
+.portfolio h4 {
+    margin: 20px 0;
+    font-size: .9rem;
+}
+.portfolio p {
+    color: var(--colorFont);
+    font-size: .9rem;
+}
+
+/***************
+about
+****************/
+
+.about {
+    padding: var(--padding);
+    background-color: var(--colorLightGray);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.about img {
+    width: 100%;
+}
+.about article {
+    flex: 0 0 44%;
+}
+.about article:first-child {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.about article:first-child p {
+    color: var(--colorFont);
+    font-size: .9rem;
+    margin: 15px 0;
+}
+
+.about article:first-child button {
+    border-radius: 0;
+}
+
+/***************
+pages
+****************/
+
+.pages {
+    padding: var(--padding);
+}
+.pages .row {
+    text-align: left;
+}
+.pages .row h2 {
+    color: var(--colorFont);
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+.pages .row p {
+    margin-top: 50px;
+    font-style: italic;
+}
+.pages .col {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.pages article {
+    flex: 0 0 31%;
+}
+.pages article:last-child {
+    background-image: linear-gradient(
+        rgba(255,255,255,.5),
+    rgba(255,255,255,.5)),
+    url(img/skills.jpg);
+    background-position: center top;
+    background-size: cover;
+}
+.pages image {
+    width: 100%;
+}
+.pages article p {
+    margin-top: 20px;
+}
+
+/****************
+skills
+****************/
+.skills {
+    padding: var(--padding);
+    background-image: linear-gradient( to left,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.95)),url(img/skills1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--colorWhite);
+}
+.skills h3 {
+    text-align: center;
+    color: var(--colorWhite);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills article {
+    flex: 0 0 23%;
+    text-align: center;
+    margin-top: 200px;
+    line-height: 3;
+}
+.skills i {
+    font-size: 4rem;
+}
+.skills h4 {
+    color: var(--colorWhite);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/***************
+services
+****************/
+
+.services {
+    padding: var(--padding);
+    text-align: center;
+}
+.services h3 {
+    color: var(--colorFont);
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+.services .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.services article {
+    flex: 0 0 32%;
+    padding: 40px 0;
+}
+.services i {
+    font-size: 2rem;
+}
+.services h4 {
+    font-size: .9rem;
+    margin: 30px 0 20px 0;
+    color: var(--headerColorFont);
+}
+.services p {
+    color: var(--colorFont);
+    font-size: .9rem;
+}
+
+
+/***************
+interested  
+****************/
+
+.interested {
+    padding: 60px 0;
+    background-color: var(--colorBlack);
+    text-align: center;
+}
+.interested h3 {
+    color: var(--colorLightGray);
+    font-weight: 400;
+}
+.interested button {
+    border: 2px solid var(--colorLightGray);
+    color: var(--colorLightGray);
+    margin-top: 30px;
+}
+.interested button:hover {
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+}
+
+
+
+
+
+
+
+
+
+/***************
+
+****************/
+
+
+/***************
+
+****************/
+
+/***************
+
+****************/
+
+/***************
+
+****************/
