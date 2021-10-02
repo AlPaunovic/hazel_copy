@@ -333,16 +333,58 @@ interested
 }
 
 
-
-
-
-
-
-
-
 /***************
-
+ourTeam
 ****************/
+.ourTeam {
+    padding: var(--padding);
+    background-color: var(--colorBck);
+    text-align: center;
+}
+.ourTeam .row img {
+    width: 100%;
+    border: 1px solid --colorFont;
+}
+.ourTeam .row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ourTeam .row article {
+    flex: 30%;
+    padding: 10px;
+}
+.ourTeam h3 {
+    color: var(--colorFont);
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.ourTeam p {
+    font-size: .9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /***************
